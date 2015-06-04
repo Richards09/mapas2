@@ -27,17 +27,17 @@ public class MainActivity extends ActionBarActivity implements GoogleMap.OnMapCl
         googlemap.setMapType((GoogleMap.MAP_TYPE_NORMAL));
         googlemap.moveCamera(CameraUpdateFactory.newLatLngZoom(casa, 15));
 
-        //Mostrar / ocultar tu ubicacion
+        //Mostrar y ocultar tu ubicacion
         googlemap.setMyLocationEnabled(true);
-        //Mostara / ocultar los controles de Zoom
+        //Mostara y ocultar los controles de Zoom
         googlemap.getUiSettings().setZoomControlsEnabled(true);
-        //Mostrar / ocultar los botones de localizacion
+        //Mostrar y ocultar los botones de localizacion
         googlemap.getUiSettings().setMyLocationButtonEnabled(true);
-        //Mostrar / ocultar icon de compas
+        //Mostrar y ocultar icon de compas
         googlemap.getUiSettings().setCompassEnabled(true);
-        //Mostrar / ocultar evento de rotar
+        //Mostrar y ocultar evento de rotar
         googlemap.getUiSettings().setRotateGesturesEnabled(true);
-        //Mostrar / ocultar funcionalidad de Zoom
+        //Mostrar y ocultar funcionalidad de Zoom
         googlemap.getUiSettings().setZoomGesturesEnabled(true);
 
         googlemap.addMarker(new MarkerOptions().position(casa).title("Casa De suazo").snippet("Col. centro, cuauhtemoc #111").icon(BitmapDescriptorFactory.fromResource(android.R.drawable.ic_menu_compass)).anchor(0.5f, 0.5f));
@@ -51,7 +51,7 @@ public class MainActivity extends ActionBarActivity implements GoogleMap.OnMapCl
     }
 
     public void animateCamera(View view) {
-        if (googlemap.getMyLocation()!= null)
+         if (googlemap.getMyLocation()!= null)
             googlemap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(googlemap.getMyLocation().getLatitude(),googlemap.getMyLocation().getLongitude()),15));
     }
 
